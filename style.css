@@ -3,7 +3,7 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-a{
+header a{
 	text-decoration: none;
 	color: white;
 }
@@ -11,9 +11,7 @@ header{
 	width: 100%;
 	height: 70px;
 	background-color: #EC715F;
-}
-.hanb{
-	display: none;
+	position: fixed;
 }
 nav{
 	width: 1024px;
@@ -22,19 +20,68 @@ nav{
 .img-title{
 	height: 70px;
 }
-.icon{
-	display: none;
-}
 ul{
+	display: inline-block;
 	float: right;
 }
-li{
+#sp-menu li{
 	display: inline;
 	line-height: 70px;
 	margin: auto 30px;
 	color: #FAFAFA;
 	font-size: 16px;
 }
+
+#hm-icon{
+	display: none;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	z-index: 10;
+}
+.menu-trigger,
+.menu-trigger span {
+  display: inline-block;
+  transition: all .4s;
+  box-sizing: border-box;
+}
+.menu-trigger {
+  position: relative;
+  width: 40px;
+  height: 33px;
+}
+.menu-trigger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  border-radius: 4px;
+}
+.menu-trigger span:nth-child(1) {
+  top: 0;
+}
+.menu-trigger span:nth-child(2) {
+  top: 15px;
+}
+.menu-trigger span:nth-child(3) {
+  bottom: 0;
+}
+.menu-trigger.active span:nth-child(1) {
+  -webkit-transform: translateY(20px) rotate(-45deg);
+  transform: translateY(10px) rotate(-45deg);
+  background-color: #fff;
+}
+.menu-trigger.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-trigger.active span:nth-of-type(3) {
+  -webkit-transform: translateY(-10px) rotate(45deg);
+  transform: translateY(-20px) rotate(45deg);
+  background-color: #fff;
+}
+
+
 .main-visal{
 	width: 100%;
 	height: 650px;
@@ -45,7 +92,6 @@ li{
 	background-image: url(img/mv.png);
 	background-position: center;
 	background-size: cover;
-
 }
 .main-visal-text{
 	text-align: center;
@@ -64,7 +110,7 @@ li{
 
 main{
 	width: 100%;
-	color: #000000;
+	color: black;
 	text-align: center;
 }
 .main-1{
@@ -231,19 +277,39 @@ footer{
 		padding-right: 5%;
 		padding-left: 5%;
 	}
-	.icon{
-		display: inline;
-	}
-	ul{
-		display: none;
-	}
-	.hanb{
-		width: 30px;
-		height: 30px;
-		display: block;
-		float: right;
-		line-height: 70px;
-		border: solid 3px;
+	
+	
+    ul{
+    	float: none;
+    	display: block;
+    }
+    #sp-menu {
+		position: fixed;
+		top: 0;
+		left: 0;
+        background: #000;
+        color: #fff;
+        width: 30%;
+        min-height: 100%;
+        float: right;
+        display: none;
+        z-index: 9;
+    }
+    #sp-menu li{
+      text-align: center;
+      margin-bottom: 30px;
+      display: block;
+      line-height: auto;
+
+    }
+    #sp-menu a{
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+	#hm-icon{
+		display: inline-block;
 	}
 	.img-main-visal{
 		background-image: url(img/code.png)
