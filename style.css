@@ -86,10 +86,15 @@ ul{
 	width: 100%;
 	height: 650px;
 }
+.container{
+	height: 650px;
+	padding-top: 70px;
+	background-position: center;
+	background-size: cover;
+}
 .img-main-visal{
 	width: 100%;
 	height: 650px;
-	background-image: url(img/mv.png);
 	background-position: center;
 	background-size: cover;
 }
