@@ -54,5 +54,13 @@ $(function(){
   $('.main-img:nth-child(6)').on('click', function(){
     $('.main-img:nth-child(6)').slideUp();
   });
+});
 
+$(function() {
+  $('#back a').on('click',function(event){
+    $('body, html').animate({
+      scrollTop:0
+    }, 800);
+    event.preventDefault();
+  });
 });
