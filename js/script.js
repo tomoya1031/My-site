@@ -30,3 +30,29 @@ $(".theTarget").skippr({
   hidePrevious : false
 });
 
+$(function(){
+  $('.main-img:nth-child(1)').on('click', function(){
+    $('.main-img:nth-child(1)').slideUp();
+  });
+
+  $('.main-img:nth-child(2)').on('click', function(){
+    $('.main-img:nth-child(2)').slideUp();
+  });
+
+  $('.main-img:nth-child(3)').on('click', function(){
+    $('.main-img:nth-child(3)').slideUp();
+  });
+
+  $('.main-img:nth-child(4)').on('click', function(){
+    $('.main-img:nth-child(4)').slideUp();
+  });
+
+  $('.main-img:nth-child(5)').on('click', function(){
+    $('.main-img:nth-child(5)').slideUp();
+  });
+
+  $('.main-img:nth-child(6)').on('click', function(){
+    $('.main-img:nth-child(6)').slideUp();
+  });
+
+});
